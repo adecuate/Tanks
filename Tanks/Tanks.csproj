@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E0BF045-3E3B-4D2B-8DCC-C329795D67E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tanks</RootNamespace>
+    <AssemblyName>Tanks</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apple.cs" />
+    <Compile Include="AppleImg.cs" />
+    <Compile Include="Controller_mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller_mainForm.Designer.cs">
+      <DependentUpon>Controller_mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FireTank.cs" />
+    <Compile Include="FireTankImg.cs" />
+    <Compile Include="GameStatus.cs" />
+    <Compile Include="Hunter.cs" />
+    <Compile Include="HunterImg.cs" />
+    <Compile Include="ICurrentPicture.cs" />
+    <Compile Include="IPicture.cs" />
+    <Compile Include="IRun.cs" />
+    <Compile Include="ITransparent.cs" />
+    <Compile Include="ITurn.cs" />
+    <Compile Include="ITurnAround.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Packman.cs" />
+    <Compile Include="PackmanImg.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="ProjectileImg.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tank.cs" />
+    <Compile Include="TankImg.cs" />
+    <Compile Include="Thinfinity.VirtualUI.cs" />
+    <Compile Include="View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wall.cs" />
+    <Compile Include="WallImg.cs" />
+    <EmbeddedResource Include="Controller_mainForm.resx">
+      <DependentUpon>Controller_mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseButton.bmp" />
+    <None Include="Resources\Безымянный.png" />
+    <None Include="Resources\PlayButton.bmp" />
+    <None Include="Resources\FireTankImg5.bmp" />
+    <None Include="Resources\FireTankImg6.bmp" />
+    <None Include="Resources\FireTankImg4.bmp" />
+    <None Include="Resources\FireTankImg3.bmp" />
+    <None Include="Resources\FireTankImg2.bmp" />
+    <None Include="Resources\FireTankImg1.bmp" />
+    <None Include="Resources\Projectile10.bmp" />
+    <None Include="Resources\Projectile01.bmp" />
+    <None Include="Resources\Projectile0_1.bmp" />
+    <None Include="Resources\Projectile_10.bmp" />
+    <None Include="Resources\Apple.bmp" />
+    <Content Include="Resources\army-icon-8696-16x16.ico" />
+    <None Include="Resources\PackmanImg_01.bmp" />
+    <None Include="Resources\PackmanImg_011.bmp" />
+    <None Include="Resources\PackmanImg_012.bmp" />
+    <None Include="Resources\PackmanImg_013.bmp" />
+    <None Include="Resources\PackmanImg_014.bmp" />
+    <None Include="Resources\PackmanImg_10.bmp" />
+    <None Include="Resources\PackmanImg_101.bmp" />
+    <None Include="Resources\PackmanImg_102.bmp" />
+    <None Include="Resources\PackmanImg_103.bmp" />
+    <None Include="Resources\PackmanImg_104.bmp" />
+    <None Include="Resources\PackmanImg0_1.bmp" />
+    <None Include="Resources\PackmanImg0_11.bmp" />
+    <None Include="Resources\PackmanImg0_12.bmp" />
+    <None Include="Resources\PackmanImg0_13.bmp" />
+    <None Include="Resources\PackmanImg0_14.bmp" />
+    <None Include="Resources\Packman10.bmp" />
+    <None Include="Resources\Packman101.bmp" />
+    <None Include="Resources\Packman102.bmp" />
+    <None Include="Resources\Packman103.bmp" />
+    <None Include="Resources\Packman104.bmp" />
+    <None Include="Resources\HunterImg10.bmp" />
+    <None Include="Resources\HunterImg101.bmp" />
+    <None Include="Resources\HunterImg102.bmp" />
+    <None Include="Resources\HunterImg103.bmp" />
+    <None Include="Resources\HunterImg104.bmp" />
+    <None Include="Resources\HunterImg_01.bmp" />
+    <None Include="Resources\HunterImg_011.bmp" />
+    <None Include="Resources\HunterImg_012.bmp" />
+    <None Include="Resources\HunterImg_013.bmp" />
+    <None Include="Resources\HunterImg_014.bmp" />
+    <None Include="Resources\HunterImg_10.bmp" />
+    <None Include="Resources\HunterImg_101.bmp" />
+    <None Include="Resources\HunterImg_102.bmp" />
+    <None Include="Resources\HunterImg_103.bmp" />
+    <None Include="Resources\HunterImg_104.bmp" />
+    <None Include="Resources\HunterImg0_1.bmp" />
+    <None Include="Resources\HunterImg0_11.bmp" />
+    <None Include="Resources\HunterImg0_12.bmp" />
+    <None Include="Resources\HunterImg0_13.bmp" />
+    <None Include="Resources\HunterImg0_14.bmp" />
+    <None Include="Resources\Tank241.bmp" />
+    <None Include="Resources\Tank231.bmp" />
+    <None Include="Resources\Tank221.bmp" />
+    <None Include="Resources\Tank211.bmp" />
+    <None Include="Resources\Tank25.bmp" />
+    <None Include="Resources\Tank44.bmp" />
+    <None Include="Resources\Tank43.bmp" />
+    <None Include="Resources\Tank42.bmp" />
+    <None Include="Resources\Tank41.bmp" />
+    <None Include="Resources\Tank35.bmp" />
+    <None Include="Resources\Tank34.bmp" />
+    <None Include="Resources\Tank33.bmp" />
+    <None Include="Resources\Tank32.bmp" />
+    <None Include="Resources\Tank31.bmp" />
+    <None Include="Resources\Tank24.bmp" />
+    <None Include="Resources\Tank23.bmp" />
+    <None Include="Resources\Tank22.bmp" />
+    <None Include="Resources\Tank21.bmp" />
+    <None Include="Resources\Tank4.bmp" />
+    <None Include="Resources\Tank3.bmp" />
+    <None Include="Resources\Tank2.bmp" />
+    <None Include="Resources\Wall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
